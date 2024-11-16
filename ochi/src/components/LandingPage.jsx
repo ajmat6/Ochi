@@ -8,17 +8,17 @@ const LandingPage = () => {
             {
                 ["We Create", "Eye-Opening", "Presentations"].map((item, index) => (
                     <div key={index} className='masker'>
-                        <div className='w-fit flex items-end'>
+                        <div className='w-fit flex'>
                             {
-                                index === 1 && <div className='w-[9vw] h-[4.5vw] bg-red-600'></div>
+                                index === 1 && <div className='w-[8.5vw] h-[5vw] relative top-[0.7vw] bg-red-600 rounded-md mr-2'></div>
                             }
-                            <h1 className='uppercase text-8xl font-["Test Founders Grotesk"] leading-[5.5vw] tracking-tighter font-medium'>{item}</h1>
+                            <h1 className='uppercase text-[100px] font-["Test Founders Grotesk"] leading-[5.8vw] tracking-tighter font-medium'>{item}</h1>
                         </div>
                     </div>
                 ))
             }
         </div>
-        <div className='border-t-[1px] mt-56 border-zinc-700 flex px-16 justify-between py-5'>
+        <div className='border-t-[1px] mt-52 border-zinc-700 flex px-16 justify-between py-5'>
             {
                 ["For public and private companies", "From the the first pitch to IPO"].map((item, index) => (
                     <p className={`text-md font-light leading-none ${index === 1 && "ml-28"}`} key={index}>{item}</p>
