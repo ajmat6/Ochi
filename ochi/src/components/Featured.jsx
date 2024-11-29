@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
+// https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png
+// https://ochi.design/wp-content/uploads/2023/08/Frame-3875-663x551.jpg
+// https://ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png
 const Featured = () => {
+    const [showText, setShowText] = useState('');
   return (
     <div className='my-16'>
         <p className='text-6xl px-16 tracking-tight py-10 border-b-2'>Featured projects</p> 
-        <div className='flex flex-wrap px-16 pt-8 gap-3'>
-            <div className='my-7'>
+        <div className='flex flex-wrap px-16 pt-8 gap-11 relative'>
+            <div className='absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] hover:visible text-7xl bg-red-900'>{showText}</div>
+            <div className={`my-7`}>
                 <div className='flex gap-2 items-center'>
                     <div className='h-[1vh] w-[1vh] bg-zinc-50 rounded-full'></div>
                     <div className='font-light'>CARDBOARD SPACESHIP</div>
                 </div>
-                <img className='rounded-md my-4' src="https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png" alt="" />
+                <div className='' onMouseEnter={() => setShowText('CARDBOARD SPACESHIP')} onMouseLeave={() => setShowText('')}>
+                    <div className='hover:scale- ease-in'>
+                        <img className='rounded-xl my-4' src="https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png" alt="" />
+                    </div>
+                </div>
                 <div className='flex gap-2'>
                     <div className='border-2 px-3 py-1 rounded-full'>BRANDED TEMPLATE</div>
                     <div className='border-2 px-3 py-1 rounded-full'>SALES DECK</div>
@@ -22,31 +31,11 @@ const Featured = () => {
                     <div className='h-[1vh] w-[1vh] bg-zinc-50 rounded-full'></div>
                     <div className='font-light'>CARDBOARD SPACESHIP</div>
                 </div>
-                <img className='rounded-md my-4' src="https://ochi.design/wp-content/uploads/2024/08/Frame-481692-1-663x551.png" alt="" />
-                <div className='flex gap-2'>
-                    <div className='border-2 px-3 py-1 rounded-full'>BRANDED TEMPLATE</div>
-                    <div className='border-2 px-3 py-1 rounded-full'>SALES DECK</div>
-                    <div className='border-2 px-3 py-1 rounded-full'>SOCIAL MEDIA TEMPLATE</div>
+                <div className=''>
+                    <div className='hover:scale- ease-in'>
+                        <img className='rounded-xl my-4' src="https://ochi.design/wp-content/uploads/2024/08/CS_Website_1-663x551.png" alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className='my-7'>
-                <div className='flex gap-2 items-center'>
-                    <div className='h-[1vh] w-[1vh] bg-zinc-50 rounded-full'></div>
-                    <div className='font-light'>CARDBOARD SPACESHIP</div>
-                </div>
-                <img className='rounded-md my-4' src="https://ochi.design/wp-content/uploads/2023/08/Frame-3875-663x551.jpg" alt="" />
-                <div className='flex gap-2'>
-                    <div className='border-2 px-3 py-1 rounded-full'>BRANDED TEMPLATE</div>
-                    <div className='border-2 px-3 py-1 rounded-full'>SALES DECK</div>
-                    <div className='border-2 px-3 py-1 rounded-full'>SOCIAL MEDIA TEMPLATE</div>
-                </div>
-            </div>
-            <div className='my-7'>
-                <div className='flex gap-2 items-center'>
-                    <div className='h-[1vh] w-[1vh] bg-zinc-50 rounded-full'></div>
-                    <div className='font-light'>CARDBOARD SPACESHIP</div>
-                </div>
-                <img className='rounded-md my-4' src="https://ochi.design/wp-content/uploads/2022/12/PB-Front-4-663x551.png" alt="" />
                 <div className='flex gap-2'>
                     <div className='border-2 px-3 py-1 rounded-full'>BRANDED TEMPLATE</div>
                     <div className='border-2 px-3 py-1 rounded-full'>SALES DECK</div>
