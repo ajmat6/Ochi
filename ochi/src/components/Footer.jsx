@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className='rounded-t-2xl border-t-2 h-[101vh]'>
+    <div className='rounded-t-2xl border-t-2 h-[101vh] z-30'>
         <div className='flex text-zinc-50 py-24  mx-16'>
             <div className='flex flex-col justify-between w-[50%]  uppercase text-[100px] font-["Test Founders Grotesk"] leading-[5.8vw] tracking-tighter font-medium'>
                 <div>

@@ -1,16 +1,19 @@
+import { motion } from 'framer-motion'; // for card motion
 import React from 'react'
 import { FaArrowUpLong } from "react-icons/fa6";
 
 const LandingPage = () => {
   return (
-    <div className='w-full h-screen bg-zinc-900 pt-2'>
+    <div data-scroll data-scroll-speed="-.8" className='w-full h-screen bg-zinc-900 pt-2 z-0'>
         <div className='textStructure mt-40 px-16'>
             {
                 ["We Create", "Eye-Opening", "Presentations"].map((item, index) => (
                     <div key={index} className='masker'>
                         <div className='w-fit flex'>
-                            {
-                                index === 1 && <div className='w-[8.5vw] h-[5vw] relative top-[0.7vw] bg-red-600 rounded-md mr-2'></div>
+                            { 
+                            // w-[8.5vw] h-[5vw]
+                                index === 1 && <motion.div initial={{width: 0}} animate={{width: '8.5vw'}} transition={{ease: [0.83, 0, 0.17, 1], duration: 1}} className='w-[8.5vw] h-[5vw] relative top-[0.7vw] rounded-md mr-2 bg-[url("https://tse2.mm.bing.net/th?id=OIP.6SYHmPwngl1GaCbjtIHkaAAAAA&pid=Api&P=0&h=180")] bg-no-repeat object-none'>
+                                </motion.div>
                             }
                             <h1 className='uppercase text-[100px] font-["Test Founders Grotesk"] leading-[5.8vw] tracking-tighter font-medium'>{item}</h1>
                         </div>
