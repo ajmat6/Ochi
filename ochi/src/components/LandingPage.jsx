@@ -3,7 +3,9 @@ import React from 'react'
 import { FaArrowUpLong } from "react-icons/fa6";
 
 const LandingPage = () => {
+    
   return (
+    // data-scroll data-scroll-speed="-.8" is used for reducing scrolling speed for one so that next one could go over it: It is taken from locomotive library
     <div data-scroll data-scroll-speed="-.8" className='w-full h-screen bg-zinc-900 pt-2 z-0'>
         <div className='textStructure mt-40 px-16'>
             {

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Cards = () => {
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="" className='w-full flex px-14 pt-[6rem] mb-[22rem] gap-4 sticky top-0'>
+    <div data-scroll data-scroll-section data-scroll-speed="" className='w-full flex px-14 pt-[6rem] mb-[22rem] gap-4 sticky top-0 z-0'>
         <div className='h-[50vh] w-[48%] bg-[#004D43] rounded-lg relative'>
             <img className='absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] h-16' src="https://ochi.design/wp-content/uploads/2022/04/logo001.svg" alt="" />
             <div className='absolute top-[88%] left-[2%] rounded-full border-2 px-2 py-1'>&copy; 2019-2022</div>
