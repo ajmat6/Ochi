@@ -13,9 +13,6 @@ import { MyContext } from './Context/MyContext'
 
 const App = () => {
   const locomotiveScroll = new LocomotiveScroll();
-  useEffect(() => {
-    <Loader />
-  })
   const [load, setLoad] = useState(0);
   return (
     <MyContext.Provider value={{load, setLoad}}>

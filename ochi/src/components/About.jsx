@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { FaArrowUpLong } from "react-icons/fa6";
 
 const About = () => {
+    const[but, setBut] = useState(false)
   return (
     <div data-scroll data-scroll-speed="0.0001" className='bg-[#CDEA68] h-[83vw] w-full rounded-t-3xl text-zinc-800'>
         <p className='text-6xl font-["Neue_Montreal"] py-24 px-14'>
@@ -36,9 +38,13 @@ const About = () => {
         <div className='flex px-14 justify-between'>
             <div className='py-4'>
                 <div className='text-6xl text-zinc-950 tracking-tighter'>Our approach:</div>
-                <button className='w-[12vw] h-14 bg-zinc-950 rounded-full flex gap-10 justify-center items-center text-white mt-6'>
-                    <div>READ MORE</div>
-                    <div className='w-2 h-2 bg-zinc-100 rounded-full'></div>
+                <button className='w-[12vw] h-14 bg-zinc-950 rounded-full flex gap-10 justify-center items-center text-white mt-6' onMouseEnter={() => setBut(true)} onMouseLeave={() => setBut(false)}>
+                    <div>Read More</div>
+                    <div className='w-8 h-8 bg-zinc-950 rounded-full flex items-center justify-center'>
+                        <div className={`${but ? 'w-8 h-8 ease-in duration-200' : 'w-2 h-2'} bg-zinc-100 rounded-full flex items-center justify-center`}>
+                            {but && <FaArrowUpLong className='text-black rotate-[45deg]'/>}
+                        </div>
+                    </div>
                 </button>
             </div>
             <div className='py-4'>
